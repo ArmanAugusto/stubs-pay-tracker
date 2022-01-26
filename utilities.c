@@ -4,6 +4,16 @@
 
 void display_current_date() {
     time_t s;
+    struct tm* current_date;
+
+    s = time(NULL);
+    current_date = localtime(&s);
+
+    printf("%d, %d %d, %d \n", current_date->tm_wday, (current_date->tm_mon + 1), current_date->tm_mday, (current_date->tm_year + 1900));
+}
+
+void display_current_local_time() {
+    time_t s;
     struct tm* current_time;
 
     s = time(NULL);
