@@ -4,5 +4,4 @@
 void display_current_date();
 void display_current_local_time();
 
-
 #endif

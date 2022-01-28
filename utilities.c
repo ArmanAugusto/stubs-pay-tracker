@@ -1,15 +1,27 @@
 #include <stdio.h>
 #include <time.h>
+#include <string.h>
 #include "utilities.h"
 
+/*
+ *  fix convert_day and convert_month functions
+ */
+
+#define BUF_LEN 256
+
 void display_current_date() {
-    time_t s;
-    struct tm* current_date;
+    char buf[BUF_LEN] = {0};
+    
+    time_t t = time(NULL);
+    
+    if(t == -1) {
+        puts("[ERROR]");
+    }
 
-    s = time(NULL);
-    current_date = localtime(&s);
+    struct tm* current = localtime(&t);
 
-    printf("%d, %d %d, %d \n", current_date->tm_wday, (current_date->tm_mon + 1), current_date->tm_mday, (current_date->tm_year + 1900));
+    strftime(buf, BUF_LEN, "%A, %B %-d, %G", current);
+    puts(buf); 
 }
 
 void display_current_local_time() {
@@ -30,3 +42,4 @@ void display_current_local_time() {
             current_time->tm_sec);
     printf("\n\n\n");
 }
+
