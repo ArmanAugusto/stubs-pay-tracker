@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <postgresql/libpq-fe.h>
+#include <libpq-fe.h>
 #include "database.h"
 
 char connect_to_pg_db() {
