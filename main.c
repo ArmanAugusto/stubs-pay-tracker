@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <libpq-fe.h>
 #include "utilities.h"
 #include "menus.h"
+#include "database.h"
 
 /*
  *  main.c
@@ -17,6 +20,8 @@ int main(int argc, char *argv[]) {
     display_current_local_time();
     printf("\n\n");
     authentication_menu();
+    connect_to_pg_db();
+    printf("\n\n***NOTE:  REMEMBER TO INCLUDE \"-I/usr/include/postgresql -lpq\"***\n\n");
 
      return 0;
  }
