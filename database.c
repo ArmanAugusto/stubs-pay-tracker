@@ -12,10 +12,13 @@ char connect_to_pg_db() {
         exit(1);
 
         return 'f';
-    }
+    } else {
 
-    printf("Database connection successful...\n");
-    PQfinish(conn);
+        printf("Database connection successful...\n");
+        PQfinish(conn);
+
+        return 't';
+    }
 
     return 't';
 }
