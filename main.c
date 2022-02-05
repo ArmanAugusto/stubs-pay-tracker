@@ -4,6 +4,7 @@
 #include "utilities.h"
 #include "menus.h"
 #include "database.h"
+#include "about_spt.h"
 
 /*
  *  main.c
@@ -22,6 +23,8 @@ int main(int argc, char *argv[]) {
     authentication_menu();
     connect_to_pg_db();
     printf("\n\n***NOTE:  REMEMBER TO INCLUDE \"-I/usr/include/postgresql -lpq\"***\n\n");
+    display_about_spt();
+    printf("\n\n");
 
      return 0;
  }

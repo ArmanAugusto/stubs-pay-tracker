@@ -1,0 +1,7 @@
+                Stubs Pay Tracker CLI
+
+Stubs Pay Tracker is a CLI application that keeps records 
+of and tracks paystubs. It keeps track of net earnings and 
+gross earnings after taxes are withheld. Stubs Pay Tracker 
+allows the ability to track and calculate hours, pay, 
+taxes, etc. within this application.
