@@ -22,8 +22,6 @@ int main(int argc, char *argv[]) {
     printf("\n\n");
     authentication_menu();
     connect_to_pg_db();
-    printf("\n\n***NOTE:  REMEMBER TO INCLUDE \"-I/usr/include/postgresql -lpq\"***\n\n");
-    display_about_spt();
     printf("\n\n");
 
      return 0;

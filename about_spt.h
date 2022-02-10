@@ -5,4 +5,4 @@
 void display_about_spt();
 
 
-endif  /*  ABOUT_SPT_H  */
+#endif  /*  ABOUT_SPT_H  */
