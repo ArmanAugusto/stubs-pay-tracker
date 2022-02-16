@@ -5,6 +5,7 @@
 #include "menus.h"
 #include "database.h"
 #include "about_spt.h"
+#include "authentication.h"
 
 /*
  *  main.c
@@ -21,7 +22,7 @@ int main(int argc, char *argv[]) {
     display_current_local_time();
     printf("\n\n");
     authentication_menu();
-    connect_to_pg_db();
+    authentication_menu_actions();
     printf("\n\n");
 
      return 0;
