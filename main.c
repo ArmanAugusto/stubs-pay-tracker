@@ -14,6 +14,8 @@
  *
  */
 
+ // finish the log_in_user function in authentication files
+
 int main(int argc, char *argv[]) {
     printf("\n\n\n\t\t********  STUBS PAY TRACKER  ********\n\n\n");
     printf("\t\tCurrent Date:\t");
@@ -22,7 +24,8 @@ int main(int argc, char *argv[]) {
     display_current_local_time();
     printf("\n\n");
     authentication_menu();
-    authentication_menu_actions();
+    //authentication_menu_actions();
+	query_user_account();
     printf("\n\n");
 
      return 0;
