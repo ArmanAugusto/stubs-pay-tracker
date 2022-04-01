@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <libpq-fe.h>
 #include "about_spt.h"
 #include "database.h"
+#include "authentication.h"
+
+// authentication.c
 
 /*
  *  Finish log_in_user function
@@ -33,23 +37,28 @@ void authentication_menu_actions() {
     }
 }
 
-/*
-void log_in_user() {
-	
+void log_in_user(user_account *user) {
+	printf("Login User\n\n");
+	printf("Username:  ");
+	scanf("%[^\n]", user->username);
+	printf("\nPassword:  ");
+	scanf("%[^\n]", user->password);
+	printf("\n\n");
 
-    PGconn *connection = PQconnectdb("user=arman password=TekkonKinkreet14! dbname=stubs_pay_tracker_db");
+    //PGconn *connection = PQconnectdb("user=arman password=TekkonKinkreet14! dbname=stubs_pay_tracker_db");
 
-	if(PQstatus(connection) == CONNECTION_BAD) {
-		fprintf(stderr, "Connection to the database has failed:  %s\n", PQerrorMessage(connection));
-		PQfinish(connection);
-		exit(1);
-	}
+	//if(PQstatus(connection) == CONNECTION_BAD) {
+	//	fprintf(stderr, "Connection to the database has failed:  %s\n", PQerrorMessage(connection));
+	//	PQfinish(connection);
+	//	exit(1);
+	//}
 
 	//PGresult *result = PQexec(connection, "SELECT 
 
-	PQfinish(connection);
+	//PQfinish(connection);
+
+	printf("Username:  %s\nPassword:  %s\n\n", user->username, user->password);
 }
-*/
 
 void query_user_account() {
 	PGconn *connection = PQconnectdb("user=arman password=TekkonKinkreet dbname=stubs_pay_tracker_db");
