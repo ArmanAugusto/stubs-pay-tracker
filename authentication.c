@@ -40,9 +40,9 @@ void authentication_menu_actions() {
 void log_in_user(user_account *user) {
 	printf("Login User\n\n");
 	printf("Username:  ");
-	scanf("%[^\n]", user->username);
-	printf("\nPassword:  ");
-	scanf("%[^\n]", user->password);
+	scanf("%s", user->username);
+	printf("Password:  ");
+	scanf("%s", user->password);
 	printf("\n\n");
 
     //PGconn *connection = PQconnectdb("user=arman password=TekkonKinkreet14! dbname=stubs_pay_tracker_db");
@@ -57,7 +57,7 @@ void log_in_user(user_account *user) {
 
 	//PQfinish(connection);
 
-	printf("Username:  %s\nPassword:  %s\n\n", user->username, user->password);
+	printf("Your Login info:\n\nUsername:  %s\nPassword:  %s\n\n", user->username, user->password);
 }
 
 void query_user_account() {

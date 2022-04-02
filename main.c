@@ -15,7 +15,7 @@
  */
 
  // finish the log_in_user function in authentication files
- // clear cache so password can be entered
+ // use login info to log user in
 
 int main(int argc, char *argv[]) {
 	user_account usr, *user;
